@@ -1,0 +1,69 @@
+@import url('../fonts/css?family=Source+Sans+Pro:400,300italic,300,400italic,600&subset=latin,latin-ext');
+/* Fonts para Letras CSS y HTML un costado de copiar
+<link id="hu-user-gfont" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,300italic,300,400italic,600&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+*/
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #15202b;
+  font-family:'Source Sans Pro', Arial, sans-serif;
+  margin:0;
+  font-weight:300;
+  line-height: 1.5em;
+}
+/*CSS formato container*/
+.entry {
+ font-size:1.125em;
+ line-height:1.6em
+}
+.entry code,
+.entry pre {
+ font-family:Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;
+ font-size:.6875em
+}
+.entry pre {
+ border:1px solid #ddd;
+}
+.entry code {
+ background:#eee;
+ padding:0 3px
+}
+/*Lenguaje codigo interno*/
+.entry pre[class*=language-] {
+  font-size: 1.2em;
+}
+.entry div.code-toolbar>.toolbar,
+div.code-toolbar>.toolbar a:focus, div.code-toolbar>.toolbar a:hover,
+div.code-toolbar>.toolbar button:focus, div.code-toolbar>.toolbar button:hover,
+div.code-toolbar>.toolbar span:focus, div.code-toolbar>.toolbar span:hover {
+    opacity: 1;
+    color: #D8D8D8;
+}
+.entry div.code-toolbar>.toolbar .toolbar-item {
+    vertical-align: top;
+}
+div.code-toolbar>.toolbar a:focus, div.code-toolbar>.toolbar a:hover {
+    text-decoration: underline;
+}
+.entry div.code-toolbar>.toolbar span, div.code-toolbar>.toolbar span:focus, div.code-toolbar>.toolbar span:hover {
+    background-color: transparent;
+    font-size: 3em;
+    box-shadow: none;
+    padding: 12px;
+    display: inline-block;
+    opacity: .2;
+}
+.pad {
+ padding:5px 30px 20px
+}
+/*Solo sobre 650px puedo copiar codigo y usar movimiento de barra del codigo por usar el z-index: -1;*/
+@media only screen and (max-width:770px) {
+  .entry {
+    font-size:.9375em;
+    }
+   .pad {
+    padding:15px 15px 5px;    
+    position: relative;
+   }
+ }

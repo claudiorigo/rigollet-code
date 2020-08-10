@@ -1,0 +1,53 @@
+.wizard-container .wizard-navigation {
+  position: relative;
+}
+.wizard-card {
+    min-height: 60px;
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 
+                0 6px 30px 5px rgba(0, 0, 0, 0.12), 
+                0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+.card {
+    
+    padding: 10px 0;
+    width: 100%;
+    border-radius: 6px;
+    color: rgba(0,0,0, 0.87);
+    background: #15202b;;
+}
+.code {
+    width: 100%;
+    transform: translate3d(1310px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+    transition: all 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
+}
+.code-2 {
+    width: 100%;
+    transform: translate3d(1310px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+    transition: all 0.5s cubic-bezier(0.29, 1.42, 0.79, 1) 0s;
+}
+.wizard-card[data-color="red"] .moving-tab {
+    position: absolute;
+    text-align: center;
+    padding: 12px;
+    font-size: 12px;
+    text-transform: uppercase;
+    -webkit-font-smoothing: subpixel-antialiased;
+    background-color: #f44336;
+    top: -4px;
+    left: 0px;
+    border-radius: 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: 0 16px 26px -10px rgba(244, 67, 54, 0.56), 
+                0 4px 25px 0px rgba(0, 0, 0, 0.12), 
+                0 8px 10px -5px rgba(244, 67, 54, 0.2);
+}
+.gradient-text {
+    color: aqua;
+    position: relative;
+    text-shadow: .15em .15em .35em rgb(31, 153, 201);
+    padding: .5em;
+}

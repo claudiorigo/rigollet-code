@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Django Code</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/codigo.svg">    
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+    <!--NavBar Responsive-->
+    <link href="css/navbar.css" rel="stylesheet">
+    <!--CODE Wizard-->
+    <link href="css/code-wizard.css" rel="stylesheet">
+    <!--CCS en linea -->
+    <link rel='stylesheet' href='css/hueman-main-style-inline.css' type='text/css' media='all'>
+    <!--CCS color de font dentro container! -->
+    <link href="css/prism.min.css" rel="stylesheet">
+    </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <div class="header">
+      <div class="navbar">
+        <div class="navbar__wrapper">
+          <nav class="navbar__menu"><a class="navbar__brand" href="#"><img src="img/codigo.svg" alt="Claudio Rigollet" style="width: 45px;" />Rigollet Code</a>
+            <div id="nav-icon3"><span></span><span></span><span></span><span></span></div>
+            <ul class="navbar__nav">
+                <li class="navbar__link after-transform"><a href="index.html">Python</a></li>
+                <li class="navbar__link after-transform"><a class="active" href="django.html">Django</a></li>
+                <li class="navbar__link after-transform"><a href="#">JavaScripts</a></li>
+                <li class="navbar__link after-transform"><a href="#">CSS</a></li>
+                <li class="navbar__link after-transform"><a href="#">HTML 5</a></li>
+                <li class="navbar__link after-transform"><a href="#">PHP</a></li>
+                <li class="navbar__link after-transform"><a href="#">Oracle SQL</a></li>
+                <li class="navbar__link after-transform"><a href="git.html">Git</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="navbar-responsive">
+        <ul class="navbar-responsive__nav">
+            <li class="navbar-responsive__link after-transform"><a href="index.html">Python</a></li>
+            <li class="navbar-responsive__link after-transform"><a class="active" href="django.html">Django</a></li>
+            <li class="navbar-responsive__link after-transform"><a href="#">JavaScripts</a></li>
+            <li class="navbar-responsive__link after-transform"><a href="#">CSS</a></li>
+            <li class="navbar-responsive__link after-transform"><a href="#">HTML 5</a></li>
+            <li class="navbar-responsive__link after-transform"><a href="#">PHP</a></li>
+            <li class="navbar-responsive__link after-transform"><a href="#">Oracle SQL</a></li>
+            <li class="navbar-responsive__link after-transform"><a href="git.html">Git</a></li>
+        </ul>        
+      </div> 
+    </div>
+    <!-- partial -->
+    <!-- margenes laterales de container negro -->
+    <div id="scrollProgressBar"></div>
+    <!--INICIO CODE-->
+    <div class="pad">
+      <!-- Wizard container - Start -->
+      <div class="wizard-container">
+        <div class="card wizard-card" data-color="red">
+          <div class="wizard-navigation">                
+            <div class="moving-tab code" href="www.google.cl">Django Sintaxis</div>                
+          </div>
+        </div>
+      </div><!-- wizard container - End -->
+      <div class="entry">
+        <!-- Code Language - Start -->
+        <pre>          
+          <div class="gradient-text">Creación de nuevo proyecto</div><!--Info Code-->
+          <code class="language-Django">
+                Visual Studio Code Alt+Ñ para entrar a consola.
+                Navegar a carpeta donde quiero que quede el proyecto, en mi caso Mis Documentos.
+                →cd Documents
+                →pip install django (Si ya estaba instalado en la carpeta no es necesario).
+                →django-admin startproject myproject
+                →cd myproject (Para verificar la creación).
+                →Abrir carpeta en vscode, navegar y abrir nuevo proyecto creado.
+                →En el terminal de vscode debiera mostrar dirección del proyecto.
+                →python manage.py startapp core (donde 'core' es nuestra nueva app).
+                →En settings.py carpeta del projecto registramos nuestro modulo 'core'.
+
+                INSTALLED_APPS = [
+                'django.contrib.admin',
+                'django.contrib.auth',
+                'django.contrib.contenttypes',
+                'django.contrib.sessions',
+                'django.contrib.messages',
+                'django.contrib.staticfiles',
+                'core',
+                ]
+                
+                →python manage.py runserver
+                →Con esto activamos puerto del servidor y el proyecto debiera estaractivo.
+
+          </code>
+        </pre><!-- Code Language - End -->
+        
+        <pre>          
+          <div class="gradient-text">Versión de Django</div>
+          <code class="language-Django">
+            python -m django --version
+          </code>
+        </pre>
+
+        <pre>          
+          <div class="gradient-text">Cargar Templates HTML</div>
+          <code class="language-Django">
+            →El orden de llamados en Django es: urls → view → template.
+            →'template' Dentro del modulo 'core' creamos dos carpetas templates/core.
+            →En esta nueva carpeta core cargamos todos los HTML.
+            →'view' dentro de nuestro modulo 'core' entramos a view y creamos nuestro view o controlador.
+            
+            from django.shortcuts import render
+            
+            def home(request):
+            return render(request, 'core/home.html')
+
+            →'urls' Dentro del modulo 'core' creamos un archivo urls.py este se hara cargamo
+            de todas las sub-urls.
+
+            from django.urls import path
+            from .views import home
+            
+            urlpatterns = [
+            path('', home, name='home'),
+            ]
+
+            →Para que nuestras sub-urls se visualicen, esta tenemos que registrar en la 'urls.py'
+            raiz de nuestro projecto con 'include'.
+
+            from django.contrib import admin
+            from django.urls import path, include
+            
+            urlpatterns = [
+            path('admin/', admin.site.urls),
+            path('', include('core.urls')),
+            ]
+
+            →Ejecutamos en comando para levantar el server, NOTA: en este caso aun no carga css-js-img
+            →python manage.py runserver
+          </code>
+        </pre>
+        
+        <pre>          
+          <div class="gradient-text">Agregar carpetas CSS-JS-IMAGE-VIDEO-FONT</div>
+          <code class="language-Django">
+            →Dentro del modulo 'core' creamos dos carpetas static/core 
+            es aquí donde agregamos todas nuestras carpetas.
+            →Para rediccionar los link de nuestro css-js creamos un tag dentro del html.
+
+            &lt;title&gt;JavaScripts Code&lt;/title&gt;
+            {% load static %}
+            &lt;link rel="shortcut icon" href="{% static 'core/image/codigo.svg' %}">
+            &lt;link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+            &lt;!--NavBar Responsive-->
+            &lt;link href="{% static 'core/css/navbar.css' %}" rel="stylesheet">
+
+          </code>
+        <br></br>
+        <img src="img/css-js-img-font.jpg"></img>
+        </pre>
+        
+      </div>        
+    </div><!--FIN CODE-->
+    <script src="js/prism.min.js"></script>
+    <!--Nabvar js - Start-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src="js/navbar.js"></script>    
+  </body>
+</html>

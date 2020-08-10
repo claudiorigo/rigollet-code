@@ -1,0 +1,23 @@
+.gradient-text {
+  position: relative;
+  text-shadow: .15em .15em .35em #888;
+  padding: .5em;
+  &::after {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: radial-gradient(circle at 70% 3%, #aa048b, #bb9801);
+    mix-blend-mode: screen;
+  }
+}
+
+
+body {
+  font-size: 4vmax;
+  text-align: center;
+  background: #fff;
+  color: #000;
+}

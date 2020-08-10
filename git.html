@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Git Code</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/codigo.svg">    
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css'>
+    <!--NavBar Responsive-->
+    <link href="css/navbar.css" rel="stylesheet">
+    <!--CODE Wizard-->
+    <link href="css/code-wizard.css" rel="stylesheet">
+    <!--CCS en linea -->
+    <link href='css/hueman-main-style-inline.css' rel="stylesheet" type="text/css" media='all'>
+    <!--CCS color de font dentro container! -->
+    <link href="css/prism.min.css" rel="stylesheet">
+    </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <div class="header">
+      <div class="navbar">
+        <div class="navbar__wrapper">
+          <nav class="navbar__menu"><a class="navbar__brand" href="#"><img src="img/codigo.svg" alt="Claudio Rigollet" style="width: 45px;" />Rigollet Code</a>
+            <div id="nav-icon3"><span></span><span></span><span></span><span></span></div>
+            <ul class="navbar__nav">
+                <li class="navbar__link after-transform"><a href="index.html">Python</a></li>
+                <li class="navbar__link after-transform"><a href="django.html">Django</a></li>
+                <li class="navbar__link after-transform"><a href="#">JavaScripts</a></li>
+                <li class="navbar__link after-transform"><a href="#">CSS</a></li>
+                <li class="navbar__link after-transform"><a href="#">HTML 5</a></li>
+                <li class="navbar__link after-transform"><a href="#">PHP</a></li>
+                <li class="navbar__link after-transform"><a href="#">Oracle SQL</a></li>
+                <li class="navbar__link after-transform"><a class="active" href="git.html">Git</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="navbar-responsive">
+        <ul class="navbar-responsive__nav">
+            <li class="navbar-responsive__link after-transform"><a href="index.html">Python</a></li>
+            <li class="navbar-responsive__link after-transform"><a href="django.html">Django</a></li>
+            <li class="navbar-responsive__link after-transform"><a href="#">JavaScripts</a></li>
+            <li class="navbar-responsive__link after-transform"><a href="#">CSS</a></li>
+            <li class="navbar-responsive__link after-transform"><a href="#">HTML 5</a></li>
+            <li class="navbar-responsive__link after-transform"><a href="#">PHP</a></li>
+            <li class="navbar-responsive__link after-transform"><a href="#">Oracle SQL</a></li>
+            <li class="navbar-responsive__link after-transform"><a class="active" href="git.html">Git</a></li>
+        </ul>        
+      </div> 
+    </div>
+    <!-- partial -->
+    <!-- margenes laterales de container negro -->
+    <div id="scrollProgressBar"></div>
+    <!--INICIO CODE-->
+    <div class="pad">
+      <!-- Wizard container - Start -->
+      <div class="wizard-container">
+        <div class="card wizard-card" data-color="red">
+          <div class="wizard-navigation">                
+            <div class="moving-tab code">Git controlador de versiones</div>                
+          </div>
+        </div>
+      </div><!-- wizard container - End -->
+      <div class="entry">
+        <!-- Code Language - Start -->
+        <pre>          
+          <div class="gradient-text">Crear nuevo repositorio Git</div><!--Info Code-->
+          <code class="language-Git">
+            →Instalamos Git - * Use Git and opcional Unix tools from the Windows Command Prompt.
+            esto me creara una nueva terminal Git Bash para usar sus comandos.
+            →En terminal Git Bash usar siguientes comandos para Git y ademas los comandos Linux:            
+            →Para crear nuevo proyecto navegamos a la carpeta a iniciar proyecto.
+            cd c:/xampp/htdocs/rigollet-code
+            git init            (Inicializa nuevo proyecto)
+            git status          (Lista archivos del proyecto)
+            git add index.html  (Agrega archivo individual)
+            git add .           (Agrega todos los archivos de la carpeta)
+            →Para crear un primer punto de control de nuestro código.
+            git commit
+
+
+            →Para clonar una version ya existente.
+            git clone
+            →Para guardar 
+            git add
+            →Para guardar final
+            git commit
+
+            
+
+          </code>
+        </pre>
+
+        <pre>          
+          <div class="gradient-text">Versión Git - Terminal Git Bash</div><!--Info Code-->
+          <code class="language-Git">
+            →git version (proporciona la version instalada en Git)            
+          </code>
+        </pre>
+
+        <pre>          
+          <div class="gradient-text">Terminal Git Bash - Comandos linux</div><!--Info Code-->
+          <code class="language-Git">            
+            →ls  (listar archivos del directorio)
+            →pwd (ubicación de tu directorio)
+          </code>
+        </pre>
+
+      </div>        
+    </div><!--FIN CODE-->
+    <script src="js/prism.min.js"></script>
+    <!--Nabvar js - Start-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src="js/navbar.js"></script>    
+  </body>
+</html>
