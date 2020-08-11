@@ -39,7 +39,12 @@ pre[class*=language-] {
   color: white;
   text-shadow: 0 0 2px #9116deed, 0 0 6px #a642e89e, 0 0 2px #ad05f3ed;
 }
-
+a.token.email-link {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #03a9f4;
+    text-shadow: 0 0 2px #93bfe699, 0 0 10px #1e2742, 0 0 35px #152b4805;    
+}
 /*python lenguaje*/
 .token.keyword.keyword-from{
   color: white;

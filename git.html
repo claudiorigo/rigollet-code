@@ -72,38 +72,128 @@
             →En terminal Git Bash usar siguientes comandos para Git y ademas los comandos Linux:            
             →Para crear nuevo proyecto navegamos a la carpeta a iniciar proyecto.
             cd c:/xampp/htdocs/rigollet-code
-            git init            (Inicializa nuevo proyecto)
-            git status          (Lista archivos del proyecto)
-            git add index.html  (Agrega archivo individual)
-            git add .           (Agrega todos los archivos de la carpeta)
+            git init            (Inicializa nuevo proyecto).
+            git status          (Lista archivos del proyecto).
+            git add index.html  (Agrega archivo individual).
+            git add .           (Agrega todos los archivos de la carpeta).
+            →Para configurar el email de este usuario.
+            git config --global user.email "username@gmail.com"
+            →Para configurar el nombre del usuario.
+            git config --global user.name "User Name"
             →Para crear un primer punto de control de nuestro código.
             git commit
-
-
-            →Para clonar una version ya existente.
-            git clone
-            →Para guardar 
-            git add
-            →Para guardar final
-            git commit
-
+            →Entra a nuevo editor de codigo vim [e]Sobre escribir de todas forma [i]Para            
+            Escribir mensaje, del cambio guardado con 'git commit'. Opcional dentro del 
+            editor vim ('Ctrl + X' luego 'Y' para guardar 'N' no guardar).
+            mi primer commit
+            →Luego damos Esc y :wq (write & quit) para guardar cambios.
+            →Para ver todos los commits que hemos creado.
+            git log
+            →Por ultimo con 'git status'nos informa que nuestro, árbol de trabajo limpio.
             
-
+            On branch master
+            nothing to commit, working tree clean
+            
+            →Para revertir cambios de los archivos.
+            git checkout --index.html
+            →Para ver las diferencias hechas en los archivos.
+            git diff index.html
+            →Para listar archivos o carpetas ha ignorar en el proyecto, dentro
+            de la carpeta del proyecto creamos un archivo llamado.
+            .gitignore
+            →Para usar commit sin entrar a consola vim usamos el siguiente comando.
+            git commit -m "he agregado un .gitignore"
+            →Para sacar una foto al proyecto despues de hacer commit, con esto nos mostrara el            
+            master del proyecto.
+            git branch
+            →Para generar una rama alternativa al del master usamos branch más un seudónimo            
+            para describir la nueva rama.
+            git branch login
+            →con un 'git branch' nuevamente chequeamos las creaciones de ramas.
+            →Para moverme a mi nueva rama login.
+            git checkout login
+            →Con un 'git branch' nos mostrara en verde que estamos dentro de la rama            
+            seleccionada.
+            →En esta rama alternativa tambien es posible guardar los cambios generados con 'commit'
+            →Para volver a nuestra rama master solo es cosa de volver a escribir.
+            git checkout master
+            →Con un 'git log' podre ver que la rama login no se muestra ya que no le pertenece 
+            a la rama master, pero en la rama login si puedo ver lo de la rama master.
           </code>
         </pre>
 
         <pre>          
           <div class="gradient-text">Versión Git - Terminal Git Bash</div><!--Info Code-->
           <code class="language-Git">
-            →git version (proporciona la version instalada en Git)            
+            git version (proporciona la version instalada en Git)            
+          </code>
+        </pre>
+
+        <pre>          
+          <div class="gradient-text">Github nuevo repositorio</div><!--Info Code-->
+          <code class="language-Git">
+            →Para crear un nuevo repositorio en Github, login>Repositories>New>Repository name
+            →Una vez creado el nombre del repositorio le damos una 'Description' lo dejamos            
+            'Public' y 'Create repository' este nos entrega un link web HTTPS para compartir o 
+            SSH para usar dentro del terminal Git Basch.
+            →Primero terminamos los pasos que nos faltan por finalizar en el terminal Git Basch, 
+            en mi caso son dos
+            
+            …or create a new repository on the command line
+            
+            git remote add origin git@github.com:claudiorigo/rigollet-code.git
+            git push -u origin master            
+            
+            →Actualizamos web Github y el repositorio con los commit creados se subira.
+            →Para clonar proyecto, copiamos el link SSH y en la terminal de Git Basch.
+            git clone &lt;link ssh&gt;            
+            git push (Subir los docs a un server (Github))
+            git pull (Traer los docs de un server, traer los cambios de tus compañeros)
+            git clone (Hacerte una copia de lo que está en el server a tu PC)
+            →Solo mostrara una carpeta si existen archivos en el interior.
+            →Para usar git add con nombres que contienen espacios, utilicen comillas.
+            git add "nombre archivo.txt"
+            →Si añadieron un archivo que no querian con "git add &lt;archivo&gt;" y se olvidaron            
+            de colocarlo en ".gitignore" (Antes de hacer un commit) utilicen "git reset &lt;archivo&gt;" 
+            que seria lo inverso a "git add &lt;archivo&gt;".
+          </code>
+        </pre>
+
+        <pre>          
+          <div class="gradient-text">Error Git al usar 'push'</div><!--Info Code-->
+          <code class="language-Git">
+            $ git push -u origin master
+            git@github.com: Permission denied (publickey).
+            fatal: Could not read from remote repository.
+            
+            Please make sure you have the correct access rights
+            and the repository exists.            
+            
+            →Dentro del terminal Git Basch usamos el siguiente comando.
+            ssh-keygen
+            →Presionamos 'Enter' para Default Settings
+            →Navegamos en windows al directorio 'C:\Users\&lt;UserName&gt;\.ssh' dentro de este
+            directorio encontraremos el archivo 'id_rsa.pub' abrimos con editor de texto,          
+            copiamos su contenido
+            →Luego en la web de Github previamente logeado, en el avatar del login.
+            Settings>SSH and GPG keys>New SSH key>
+            →Title  (Referencia del key ejemplo: 'Windows-Key')
+            →Key    (pegamos el codigo anteriormente copiado)
+          
+            ssh-rsa AAAAB3NzaC1yc.....
+          
+            →Para finalizar 'Add SSH key'
+            →Ahora dentro del terminal Git Basch reintentamos el push.
+            git push -u origin master
           </code>
         </pre>
 
         <pre>          
           <div class="gradient-text">Terminal Git Bash - Comandos linux</div><!--Info Code-->
           <code class="language-Git">            
-            →ls  (listar archivos del directorio)
-            →pwd (ubicación de tu directorio)
+            →ls     (listar archivos del directorio)
+            →pwd    (ubicación de tu directorio)
+            →clear  (limpiar consola)
           </code>
         </pre>
 
