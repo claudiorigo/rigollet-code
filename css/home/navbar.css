@@ -1,3 +1,11 @@
+* {
+  box-sizing: border-box;
+  margin: 0;  
+}
+body {
+  background-color: #f5f5f5;
+  font-family: 'Roboto Condensed', sans-serif;
+}
 .navbar-responsive {
   color: #fff;
   position: absolute;
@@ -5,6 +13,7 @@
   width: 100%;
   transform: translate3d(-100%, 0, 0);
   transition: .3s all ease-in-out;
+  z-index: 1;
 }
 .navbar-responsive:after {
   content: "";
@@ -40,7 +49,6 @@
   left: 0;
   background-color: #fff;
 }
-
 .navbar {
   box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.25);
   background-color: #fff;
@@ -71,15 +79,13 @@
 }
 .navbar .navbar__wrapper .navbar__brand {
   font-weight: 700;
-  font-size: 1.2em;  
+  font-size: 1.2em;
 }
-.navbar .navbar__wrapper .navbar__brand img {
-  /*height: 100%;*/  
-    width: 40px;
-    margin-right: 8px;
-    margin-bottom: -10px;
+.navbar .navbar__wrapper .navbar__brand img { 
+  width: 40px;
+  margin-right: 8px;
+  margin-bottom: -10px;
 }
-
 .after-transform a {
   position: relative;
 }
@@ -99,7 +105,6 @@
 .after-transform a.active:after, .after-transform a:hover:after {
   transform: scaleX(1) translateZ(0);
 }
-
 /* Icon 3 */
 #nav-icon3 {
   width: 30px;
@@ -115,7 +120,6 @@
   transition: .5s ease-in-out;
   cursor: pointer;
 }
-
 #nav-icon3 span {
   display: none;
   position: absolute;
@@ -134,56 +138,47 @@
   -o-transition: .25s ease-in-out;
   transition: .25s ease-in-out;
 }
-
 #nav-icon3 span:nth-child(1) {
   top: 0px;
 }
-
 #nav-icon3 span:nth-child(2), #nav-icon3 span:nth-child(3) {
   top: 9px;
 }
-
 #nav-icon3 span:nth-child(4) {
   top: 18px;
 }
-
 #nav-icon3.open span:nth-child(1) {
   top: 9px;
   width: 0%;
   left: 50%;
 }
-
 #nav-icon3.open span:nth-child(2) {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
-
 #nav-icon3.open span:nth-child(3) {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-
 #nav-icon3.open span:nth-child(4) {
   top: 9px;
   width: 0%;
   left: 50%;
 }
-
 @media (max-width: 768px) {
   .navbar__nav {
     display: none !important;
   }
-
   #nav-icon3 span {
     display: block !important;
-  }  
+  }
 }
 @media (min-width: 768px) {
   .navbar__responsive {
     transform: translate3d(-100%, 0, 0) !important;
-  }  
+  }
 }

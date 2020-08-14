@@ -102,8 +102,8 @@ a.token.email-link {
 .token.unit,
 .token.hexcode,
 .token.deleted {
- color: #e2777a;
- text-shadow: 0 0 2px #f72cf38c, 0 0 10px #e355c059, 0 0 35px #c61b7b85;
+  color: #e2777a;
+  text-shadow: 0 0 2px #f72cf3c4, 0 0 10px #e828b729, 0 0 35px #38202f4a;
 }
 .token.number {
  color:#ae81ff

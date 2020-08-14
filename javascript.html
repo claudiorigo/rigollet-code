@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="css/home/navbar.css">
   </head>
   <body>
-    <!-- partial:index.partial.html -->
     <div class="header">
       <div class="navbar">
         <div class="navbar__wrapper">
@@ -25,9 +24,9 @@
               <li class="navbar__link after-transform"><a href="python.html">Python</a></li>
               <li class="navbar__link after-transform"><a href="django.html">Django</a></li>
               <li class="navbar__link after-transform"><a class="active" href="javascript.html">JavaScript</a></li>
-              <li class="navbar__link after-transform"><a href="#">CSS</a></li>
-              <li class="navbar__link after-transform"><a href="#">HTML 5</a></li>
-              <li class="navbar__link after-transform"><a href="#">PHP</a></li>
+              <li class="navbar__link after-transform"><a href="css.html">CSS</a></li>
+              <li class="navbar__link after-transform"><a href="html.html">HTML 5</a></li>
+              <li class="navbar__link after-transform"><a href="php.html">PHP</a></li>
               <li class="navbar__link after-transform"><a href="#">Oracle SQL</a></li>
               <li class="navbar__link after-transform"><a href="git.html">Git</a></li>
             </ul>
@@ -40,31 +39,26 @@
           <li class="navbar-responsive__link after-transform"><a href="python.html">Python</a></li>
           <li class="navbar-responsive__link after-transform"><a href="django.html">Django</a></li>
           <li class="navbar-responsive__link after-transform"><a class="active" href="javascript.html">JavaScript</a></li>
-          <li class="navbar-responsive__link after-transform"><a href="#">CSS</a></li>
-          <li class="navbar-responsive__link after-transform"><a href="#">HTML 5</a></li>
-          <li class="navbar-responsive__link after-transform"><a href="#">PHP</a></li>
+          <li class="navbar-responsive__link after-transform"><a href="css.html">CSS</a></li>
+          <li class="navbar-responsive__link after-transform"><a href="html.html">HTML 5</a></li>
+          <li class="navbar-responsive__link after-transform"><a href="php.html">PHP</a></li>
           <li class="navbar-responsive__link after-transform"><a href="#">Oracle SQL</a></li>
           <li class="navbar-responsive__link after-transform"><a href="git.html">Git</a></li>
         </ul>        
       </div> 
     </div>
-    <!-- partial -->
-    <!-- margenes laterales de container negro -->
     <div id="scrollProgressBar"></div>
-    <!--INICIO CODE-->
     <div class="pad">
-      <!-- Wizard container - Start -->
       <div class="wizard-container">
         <div class="card wizard-card" data-color="red">
           <div class="wizard-navigation">                
             <div class="moving-tab code">JavaScript Sintaxis</div>                
           </div>
         </div>
-      </div><!-- wizard container - End -->
+      </div>
       <div class="entry">
-        <!-- Code Language - Start -->
         <pre>          
-          <div class="gradient-text">NavBar icon hamburger</div><!--Info Code-->
+          <div class="gradient-text">NavBar icon hamburger</div>
           <code class="language-javascript">
             $(document).ready(function () {
                 var state = false,
@@ -96,9 +90,10 @@
                 })
             })
           </code>
-        </pre><!-- Code Language - End -->
+        </pre>
+
         <pre>
-            <div class="gradient-text">Limpiar Formulario</div><!--Info Code-->
+            <div class="gradient-text">Limpiar Formulario</div>
             <code class="language-javascript">
                 &lt;input type="button" onclick="limpiarFormulario()" value="Limpiar formulario"&gt;
                 &lt;script&gt;
@@ -108,6 +103,19 @@
                 &lt;/script&gt;
             </code>
         </pre>
+
+        <pre>
+          <div class="gradient-text">JavaScript text</div>
+          <code class="language-javascript">
+              &lt;script type="text/javascript">
+                $('#gallery').gallerax({
+                  outputSelector: 		'.output',					  // Output selector
+                  thumbnailsSelector:	    '.thumbnails li img',		  // Thumbnails selector
+                  captionSelector:		'.caption'					  // Caption selector
+                });
+              &lt;/script>
+          </code>
+        </pre>        
       </div>        
     </div>
     <script src="js/prism.min.js"></script>

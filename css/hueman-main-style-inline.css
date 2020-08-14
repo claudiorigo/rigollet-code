@@ -2,20 +2,13 @@
 /* Fonts para Letras CSS y HTML un costado de copiar
 <link id="hu-user-gfont" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,300italic,300,400italic,600&subset=latin,latin-ext" rel="stylesheet" type="text/css">
 */
-* {
-  box-sizing: border-box;
-}
-body {
-  background: #15202b;
+.entry {
+  font-size: 1.05em;
+  line-height:1.6em;
   font-family:'Source Sans Pro', Arial, sans-serif;
   margin:0;
   font-weight:300;
-  line-height: 1.5em;
-}
-/*CSS formato container*/
-.entry {
- font-size:1.125em;
- line-height:1.6em
+  
 }
 .entry code,
 .entry pre {
@@ -55,9 +48,9 @@ div.code-toolbar>.toolbar a:focus, div.code-toolbar>.toolbar a:hover {
     opacity: .2;
 }
 .pad {
- padding:5px 30px 20px
+ padding:30px 30px 20px;
+ background: #15202b;
 }
-/*Solo sobre 650px puedo copiar codigo y usar movimiento de barra del codigo por usar el z-index: -1;*/
 @media only screen and (max-width:770px) {
   .entry {
     font-size:.9375em;
