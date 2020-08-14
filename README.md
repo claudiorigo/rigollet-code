@@ -10,8 +10,8 @@ la finalidad es finalizar en Django y Python.
 ~~~
 
 1. Web responsive. _OK_
-2. Crear página de inicio con buscador code. _Proceso_
-3. Agregar página de login.
+2. Crear página de inicio con buscador code. _OK_
+3. Agregar página de login. _Proceso_
 4. Crear página admin para agregar codigo `Textarea` para ingresar codigo, 
 tal vez usar `JavaScripts` para modificar el simbolo \< por el \&lt; y 
 \> por el \&gt; en la lectura de la etiqueta \<code>.
