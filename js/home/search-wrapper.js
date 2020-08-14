@@ -5,7 +5,6 @@ class Post {
     this.category = category;
     this.img = img;
   }}
-//author
 
 const app = new Vue({
   el: '#app',
@@ -16,7 +15,7 @@ const app = new Vue({
     'Vue.js',
     'https://es.vuejs.org/v2/guide/index.html',
     'Code',
-    'https://vuejs.org/images/logo.png'),      
+    'img/search-icon/vue.js.png'),      
 
     new Post(
     'React.js',
@@ -34,13 +33,13 @@ const app = new Vue({
     'Ember.js',
     'https://guides.emberjs.com/release/',
     'Code',
-    'http://www.gravatar.com/avatar/0cf15665a9146ba852bf042b0652780a?s=200'),
+    'img/search-icon/ember.png'),
 
     new Post(
     'Meteor.js',
     'https://guide.meteor.com/',
     'Code',
-    'http://hacktivist.in/introduction-to-nodejs-mongodb-meteor/img/meteor.png'),      
+    'img/search-icon/meteor.png'),      
     
     new Post(
     'Materialize',
@@ -64,7 +63,7 @@ const app = new Vue({
     'CodeSandbox',
     'https://codesandbox.io/s/new',
     'Code Editor',
-    'http://cdn.embed.ly/providers/logos/codesandbox.png'),
+    'img/search-icon/codesandbox.png'),
       
     new Post(
     'Codepen',
@@ -95,8 +94,6 @@ const app = new Vue({
     'https://docs.feathersjs.com/',
     'Code',
     'https://cdn.worldvectorlogo.com/logos/feathersjs.svg')] },
-
-
 
   computed: {
     filteredList() {
